@@ -1,0 +1,51 @@
+﻿@model WebAppExam_21.Models.Shopping
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+<body>
+    <div>
+        <h1>Details Of @Model.shopapp_Name</h1>
+        @using (Html.BeginForm())
+        {
+            <p>
+                @Html.LabelFor((m) => m.shopapp_Id)
+                @Html.TextBoxFor((m) => m.shopapp_Id)
+            </p>
+            <p>
+                @Html.LabelFor((m) => m.shopapp_Name)
+                @Html.TextBoxFor((m) => m.shopapp_Name)
+            </p>
+            <p>
+                @Html.LabelFor((m) => m.product_Type)
+                @Html.TextBoxFor((m) => m.product_Type)
+            </p>
+            <p>
+                @Html.LabelFor((m) => m.dress)
+                @Html.TextBoxFor((m) => m.dress)
+            </p>
+            <p>
+               @Html.LabelFor((m) => m.product_Colour)
+               @Html.TextBoxFor((m) => m.product_Colour)
+            </p>
+            <p>
+               @Html.LabelFor((m) => m.size)
+               @Html.TextBoxFor((m) => m.size)
+            </p>
+            <p>
+               @Html.LabelFor((m) => m.product_Price)
+               @Html.TextBoxFor((m) => m.product_Price)
+            </p>
+            < button > Save Changes </ button >
+         }
+    </div>
+</body>
+</html>

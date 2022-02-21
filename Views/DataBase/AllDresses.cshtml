@@ -1,0 +1,46 @@
+﻿@model List<WebAppExam_21.Models.Shopping>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AllDresses</title>
+</head>
+<body>
+    <h1>List Of All SHOPS </h1>
+    <hr />
+    <div>
+        <table border="1">
+            <tr>
+                <th>ShopApp_Id</th>
+                <th>ShopApp_Name</th>
+                <th>Product_Type</th>
+                <th>Dresses</th>
+                <th>Dresses_Colour</th>
+                <th>Size Of Dresses</th>
+                <th>Price Of Product</th>
+                <th>Options</th>
+            </tr>
+
+            @foreach (var shp in Model)
+            {
+            <tr>
+                <td>@shp.shopapp_Id</td>
+                <td>@shp.shopapp_Name</td>
+                <td>@shp.product_Type</td>
+                <td>@shp.dress</td>
+                <td>@shp.product_Colour</td>
+                <td>@shp.size</td>
+                <td>@shp.product_Price</td>
+                <td>@Html.ActionLink("Edit", "OnEdit", new { id = shp.shopapp_Id })</td>
+            </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

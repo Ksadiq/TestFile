@@ -1,0 +1,31 @@
+﻿@model WebAppExam_21.Models.Shopping
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddDresses</title>
+</head>
+<body>
+    <h1>Add Dresses</h1>
+    <hr />
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>Enter the Name: @Html.EditorFor((m) => m.shopapp_Name)</p>
+            <p>Enter the Type: @Html.EditorFor((m) => m.product_Type)</p>
+            <p>Enter the Dress: @Html.EditorFor((m) => m.dress)</p>
+            <p>Colour Of Product: @Html.EditorFor((m) => m.product_Colour)</p>
+            <p>Size Of The Dress: @Html.EditorFor((m) => m.size)</p>
+            <p>Price Of THe Product: @Html.EditorFor((m) => m.product_Price)</p>
+            <p><button>Save Changes</button></p>
+        }
+
+    </div>
+</body>
+</html>
